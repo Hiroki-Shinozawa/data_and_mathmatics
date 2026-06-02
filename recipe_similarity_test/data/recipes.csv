@@ -1,0 +1,11 @@
+recipe_id,name,country,ingredients,methods
+1,肉じゃが,Japan,potato;onion;beef;soy sauce;sugar;mirin,boil;stew
+2,Irish Stew,Ireland,potato;onion;lamb;carrot;celery,stew
+3,Massaman Curry,Thailand,potato;beef;curry powder;coconut milk,stew;fry
+4,Beef Stew,USA,potato;beef;onion;carrot;tomato paste,stew
+5,Teriyaki Chicken,Japan,chicken;soy sauce;sugar;mirin,grill
+6,Stir Fry Vegetables,China,broccoli;carrot;onion;soy sauce;garlic,stir-fry
+7,Shepherd's Pie,UK,potato;beef;onion;carrot,oven-bake
+8,Butter Chicken,India,chicken;tomato;curry powder;butter,stew
+9,Potato Salad,Japan,potato;egg;mayonnaise;onion,boil
+10,Shakshuka,Middle East,tomato;egg;onion;bell pepper,stew
