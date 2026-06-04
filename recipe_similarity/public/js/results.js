@@ -5,22 +5,28 @@ const resultsList = document.getElementById('results-list');
 
 const params = new URLSearchParams(window.location.search);
 const raw = params.get('q') || '';
+const methodRaw = params.get('m') || '';
 const display = params.get('display') || raw;
+const displayMethod = params.get('displayMethod') || methodRaw;
 const ingredients = raw.split(',').map(s => s.trim()).filter(Boolean);
+const methods = methodRaw.split(',').map(s => s.trim()).filter(Boolean);
 const displayIngredients = display.split(',').map(s => s.trim()).filter(Boolean);
+const displayMethods = displayMethod.split(',').map(s => s.trim()).filter(Boolean);
 
-if (ingredients.length === 0) {
+if (ingredients.length === 0 && methods.length === 0) {
   window.location.href = '/';
 }
 
-queryDisplay.textContent = `入力材料: ${displayIngredients.join(', ')}`;
+queryDisplay.textContent = `入力材料: ${displayIngredients.join(', ') || 'なし'}`;
+const methodDisplay = document.getElementById('method-display');
+methodDisplay.textContent = `入力調理法: ${displayMethods.join(', ') || 'なし'}`;
 
 async function search() {
   try {
     const res = await fetch('/api/search', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ingredients }),
+      body: JSON.stringify({ ingredients, methods }),
     });
 
     const data = await res.json();
@@ -40,7 +46,7 @@ async function search() {
 function renderResults(results) {
   loading.classList.add('hidden');
 
-  if (results.length === 0) {
+  if (!Array.isArray(results) || results.length === 0) {
     errorMsg.textContent = '一致するレシピが見つかりませんでした。';
     errorMsg.classList.remove('hidden');
     return;
@@ -49,11 +55,19 @@ function renderResults(results) {
   results.forEach((r, i) => {
     const li = document.createElement('li');
     li.className = 'result-card';
+    const ingredientCommon = (r.commonIngredients || r.common || []).length > 0
+      ? (r.commonIngredients || r.common).join(', ')
+      : 'なし';
+    const methodCommon = (r.commonMethods || []).length > 0
+      ? r.commonMethods.join(', ')
+      : 'なし';
+
     li.innerHTML = `
       <div class="result-card">
         <h3>${i + 1}. ${escapeHtml(r.title)}</h3>
         <div class="score">類似度: ${r.score.toFixed(3)}</div>
-        <div class="common">共通材料: ${r.common.length > 0 ? r.common.join(', ') : 'なし'}</div>
+        <div class="common"><strong>共通材料:</strong> ${escapeHtml(ingredientCommon)}</div>
+        <div class="common"><strong>共通調理法:</strong> ${escapeHtml(methodCommon)}</div>
       </div>
     `;
     resultsList.appendChild(li);

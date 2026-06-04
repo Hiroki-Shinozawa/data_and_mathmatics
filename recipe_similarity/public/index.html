@@ -26,7 +26,20 @@
           <p class="hint">例: 肉じゃがなら「potato, onion, beef, soy sauce, mirin」または「じゃがいも, 玉ねぎ, 牛肉, しょうゆ, みりん」</p>
         </div>
 
-        <div class="tag-area" id="tag-area"></div>
+        <div class="tag-area" id="ingredient-tag-area"></div>
+
+        <div class="input-group">
+          <label for="methods-input">調理法をカンマ区切りで入力（英語 / 日本語可）</label>
+          <input
+            type="text"
+            id="methods-input"
+            placeholder="例: boil, stew, fry または 煮る, 炒める, 蒸す"
+            autocomplete="off"
+          />
+          <p class="hint">例: 煮る / stew、炒める / fry、蒸す / steam</p>
+        </div>
+
+        <div class="tag-area" id="method-tag-area"></div>
 
         <button type="submit" id="search-btn" disabled>検索する</button>
       </form>
