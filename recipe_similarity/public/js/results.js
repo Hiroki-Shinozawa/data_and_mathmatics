@@ -5,13 +5,15 @@ const resultsList = document.getElementById('results-list');
 
 const params = new URLSearchParams(window.location.search);
 const raw = params.get('q') || '';
+const display = params.get('display') || raw;
 const ingredients = raw.split(',').map(s => s.trim()).filter(Boolean);
+const displayIngredients = display.split(',').map(s => s.trim()).filter(Boolean);
 
 if (ingredients.length === 0) {
   window.location.href = '/';
 }
 
-queryDisplay.textContent = `入力材料: ${ingredients.join(', ')}`;
+queryDisplay.textContent = `入力材料: ${displayIngredients.join(', ')}`;
 
 async function search() {
   try {
