@@ -1,4 +1,4 @@
-// Bag of Ingredients のコサイン類似度
+// Bag of Ingredients / Methods のコサイン類似度
 // cos(A, B) = |A ∩ B| / (√|A| × √|B|)
 // 密なベクトルを作らず集合演算で計算するため大規模データでも高速
 function cosineSimilarity(setA, setB) {
@@ -12,12 +12,30 @@ function cosineSimilarity(setA, setB) {
   return intersection / (Math.sqrt(setA.size) * Math.sqrt(setB.size));
 }
 
-function findTopSimilar(inputSet, recipes, topN = 10) {
+function findTopSimilar({ ingredientSet, methodSet }, recipes, topN = 10) {
   const scored = recipes.map(recipe => {
-    const recipeSet = new Set(recipe.ingredients);
-    const score = cosineSimilarity(inputSet, recipeSet);
-    const common = recipe.ingredients.filter(i => inputSet.has(i));
-    return { title: recipe.title, score: Math.round(score * 1000) / 1000, common };
+    const recipeIngredientSet = new Set(recipe.ingredients);
+    const recipeMethodSet = new Set(recipe.methods || []);
+    const ingredientScore = ingredientSet.size > 0 ? cosineSimilarity(ingredientSet, recipeIngredientSet) : 0;
+    const methodScore = methodSet.size > 0 ? cosineSimilarity(methodSet, recipeMethodSet) : 0;
+
+    let score = 0;
+    if (ingredientSet.size > 0 && methodSet.size > 0) {
+      score = (ingredientScore + methodScore) / 2;
+    } else {
+      score = ingredientScore + methodScore;
+    }
+
+    const commonIngredients = recipe.ingredients.filter(i => ingredientSet.has(i));
+    const commonMethods = (recipe.methods || []).filter(m => methodSet.has(m));
+
+    return {
+      title: recipe.title,
+      score: Math.round(score * 1000) / 1000,
+      commonIngredients,
+      commonMethods,
+      common: commonIngredients,
+    };
   });
 
   return scored

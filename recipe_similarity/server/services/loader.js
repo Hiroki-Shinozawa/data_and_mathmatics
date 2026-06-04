@@ -20,12 +20,30 @@ async function loadRecipes(filePath) {
           console.log(`${recipes.length} 件読み込み完了（上限到達のため打ち切り）`);
           return resolve();
         }
+
         try {
-          const ner = JSON.parse(record.NER);
-          if (ner.length > 0) {
+          const ingredientsStr = record.ingredients || '';
+          const methodsStr = record.methods || '';
+          let ingredients = [];
+          let methods = [];
+
+          if (ingredientsStr) {
+            ingredients = ingredientsStr.split(';').map(i => i.toLowerCase().trim()).filter(Boolean);
+          } else if (record.NER) {
+            const ner = JSON.parse(record.NER);
+            ingredients = Array.isArray(ner) ? ner.map(i => i.toLowerCase().trim()).filter(Boolean) : [];
+          }
+
+          if (methodsStr) {
+            methods = methodsStr.split(';').map(m => m.toLowerCase().trim()).filter(Boolean);
+          }
+
+          if (ingredients.length > 0 || methods.length > 0) {
             recipes.push({
-              title: record.title,
-              ingredients: ner.map(i => i.toLowerCase().trim()),
+              title: record.name || record.title || '無題のレシピ',
+              country: record.country || '',
+              ingredients,
+              methods,
             });
             if (recipes.length % 10000 === 0) {
               console.log(`  ${recipes.length} 件読み込み中...`);
