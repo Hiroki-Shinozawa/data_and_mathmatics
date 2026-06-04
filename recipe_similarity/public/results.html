@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>検索結果 - レシピ類似度検索</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/" class="back-link">← 検索に戻る</a>
+      <h1>🔍 類似レシピ Top10</h1>
+      <p class="subtitle" id="query-display"></p>
+    </header>
+
+    <main>
+      <div id="loading" class="loading">検索中...</div>
+      <div id="error-msg" class="error hidden"></div>
+      <ol id="results-list" class="results-list hidden"></ol>
+    </main>
+  </div>
+
+  <script src="js/results.js"></script>
+</body>
+</html>

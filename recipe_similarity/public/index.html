@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>レシピ類似度検索</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🍳 レシピ類似度検索</h1>
+      <p class="subtitle">材料を入力すると、世界の似た料理を探します</p>
+    </header>
+
+    <main>
+      <form id="search-form">
+        <div class="input-group">
+          <label for="ingredients-input">材料をカンマ区切りで入力（英語）</label>
+          <input
+            type="text"
+            id="ingredients-input"
+            placeholder="例: potato, onion, beef, soy sauce"
+            autocomplete="off"
+          />
+          <p class="hint">日本語例 → 肉じゃが: potato, onion, beef, soy sauce, mirin</p>
+        </div>
+
+        <div class="tag-area" id="tag-area"></div>
+
+        <button type="submit" id="search-btn" disabled>検索する</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/search.js"></script>
+</body>
+</html>

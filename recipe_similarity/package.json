@@ -1,0 +1,17 @@
+{
+  "name": "recipe-similarity",
+  "version": "1.0.0",
+  "description": "材料からコサイン類似度で世界の似た料理を探すアプリ",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
