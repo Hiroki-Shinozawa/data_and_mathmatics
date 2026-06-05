@@ -1,0 +1,201 @@
+recipe_id,name,country,ingredients,methods
+1,肉じゃが,Japan,potato;onion;beef;soy sauce;sugar;mirin,boil;stew
+2,Irish Stew,Ireland,potato;onion;lamb;carrot;celery,stew
+3,Massaman Curry,Thailand,potato;beef;curry powder;coconut milk,stew;fry
+4,Beef Stew,USA,potato;beef;onion;carrot;tomato paste,stew
+5,Teriyaki Chicken,Japan,chicken;soy sauce;sugar;mirin,grill
+6,Stir Fry Vegetables,China,broccoli;carrot;onion;soy sauce;garlic,stir-fry
+7,Shepherd's Pie,UK,potato;beef;onion;carrot,oven-bake
+8,Butter Chicken,India,chicken;tomato;curry powder;butter,stew
+9,Potato Salad,Japan,potato;egg;mayonnaise;onion,boil
+10,Shakshuka,Middle East,tomato;egg;onion;bell pepper,stew
+11,No-Bake Nut Cookies,India,brown sugar;milk;vanilla;nuts;butter;bite size shredded rice biscuits,boil
+12,Jewell Ball'S Chicken,China,beef;chicken breasts;cream of mushroom soup;sour cream,bake
+13,Creamy Corn,Korea,frozen corn;cream cheese;butter;garlic powder;salt;pepper,stir-fry
+14,Chicken Funny,Spain,chicken;chicken gravy;cream of mushroom soup;shredded cheese,boil;bake
+15,Reeses Cups(Candy),Ireland,peanut butter;graham cracker crumbs;butter;powdered sugar;chocolate chips,bake
+16,Cheeseburger Potato Soup,Germany,baking potatoes;extra lean ground beef;butter;milk;salt;pepper,boil
+17,Rhubarb Coffee Cake,USA,sugar;butter;egg;buttermilk;flour;salt,boil
+18,Scalloped Corn,Italy,cream-style corn;whole kernel corn;crackers;egg;butter;pepper,bake
+19,Nolan'S Pepper Steak,China,tomatoes;water;onions;worcestershire sauce;green peppers;oil,simmer
+20,Millionaire Pie,Korea,pineapple;condensed milk;lemons;pecans;graham cracker crusts,oven-bake
+21,Double Cherry Delight,Vietnam,dark sweet pitted cherries;ginger ale;flavor gelatin;boiling water;almond extract;marshmallows,boil
+22,Buckeye Candy,UK,powdered sugar;butter;peanut butter;paraffin;chocolate chips,boil
+23,Quick Barbecue Wings,France,chicken;flour;barbecue sauce,fry
+24,Taco Salad Chip Dip,Mexico,taco sauce;sour cream;cream cheese;ground beef;taco seasoning;shredded lettuce,boil
+25,Pink Stuff(Frozen Dessert),Mexico,pie filling;pineapple;condensed milk;lemon juice,fry
+26,Fresh Strawberry Pie,USA,shell;cleaned strawberries;water;cornstarch;sugar;salt,boil;bake
+27,Easy German Chocolate Cake,Japan,chocolate fudge cake;white cake;wesson oil,bake
+28,Broccoli Salad,Ireland,broccoli;bacon;green onions;raisins;mayonnaise;vinegar,roast
+29,Strawberry Whatever,Spain,frozen strawberries;pineapple;bananas;pecans;strawberry;boiling water,boil
+30,Eggless Milkless Applesauce Cake,Korea,sugar;shortening;applesauce;soda;cinnamon;flour,bake
+31,"Grandma Hanrath'S Banana Breadfort Collins, Colorado",Ireland,sugar;shortening;eggs;salt;soda;flour,bake
+32,Chocolate Frango Mints,Greece,cake mix;chocolate fudge pudding;sour cream;water;wesson oil;eggs,bake
+33,Cuddy Farms Marinated Turkey,Ireland,vegetable oil;soy sauce;garlic,boil
+34,Spaghetti Sauce To Can,Italy,tomatoes;oil;garlic;tomato paste;peppers;sugar,fry
+35,Prize-Winning Meat Loaf,Ireland,ground beef;tomato juice;oats;egg;onion;pepper,bake
+36,Smothered Round Steak(Servings: 4),Greece,steak;ground black pepper;ground white pepper;vegetable oil;bell peppers;beef stock,grill
+37,Corral Barbecued Beef Steak Strips,USA,long;cooking oil;tomato sauce;water;brown sugar;mustard,simmer
+38,Easy Fudge,Japan,condensed milk;semi-sweet chocolate chips;unsweetened chocolate;nuts;vanilla,grill
+39,Taco-Filled Green Pepper,Mexico,ground beef;taco seasoning;beans;onion;salsa;green peppers,boil;bake
+40,One Hour Rolls,India,milk;sugar;yeast;salt;crisco oil;flour,boil;bake
+41,Punch Bowl Fruit Salad,Greece,peaches;fruit cocktail;pineapple;fresh strawberries;red apples;yellow apples,fry
+42,Summer Chicken,Ireland,chicken cutlets;oil;red vinegar;oregano;garlic salt,stew
+43,Cherry Pizza,Italy,cherry pie mix;deluxe white cake mix;butter;ground nuts,bake
+44,Potato And Cheese Pie,Mexico,eggs;salt;pepper;potatoes;cheddar cheese;green onions,bake
+45,Tuna Macaroni Casserole,Germany,macaroni;tuna;pimentos;onion,grill
+46,Artichoke Dip,USA,hearts;mayonnaise;parmesan cheese,bake
+47,Broccoli Dip For Crackers,Germany,sour cream;vegetable soup mix;broccoli;cheddar cheese,bake
+48,Summer Spaghetti,Italy,salad supreme;italian dressing,grill
+49,Pear-Lime Salad,Germany,pear halves;lime gelatin;cream cheese;lemon yogurt,boil
+50,Watermelon Rind Pickles,Japan,watermelon rind;sugar;apple vinegar;oil;oil of cinnamon,boil
+51,Chicken Stew,Greece,chicken;potatoes;onions;corn;english peas;peas,steam
+52,Quick Coffee Cake(6 Servings),UK,butter;sugar;egg;flour;baking powder;salt,bake
+53,Angel Biscuits,Japan,flour;sugar;baking powder;yeast;buttermilk;soda,bake
+54,Quick Peppermint Puffs,Japan,marshmallows;margarine;peppermint candy;crescent rolls,bake
+55,Fruit Pizza,Italy,yellow cake mix;water;brown sugar;butter;eggs;nuts,bake
+56,Chocolate Mint Bars,China,flour;sugar;oleo;eggs;chocolate syrup,bake
+57,Beer Bread,Italy,flour;beer;sugar,bake
+58,Chicken Divan,China,margarine;onion;celery;flour;curry powder;mushrooms,bake
+59,Mexican Cookie Rings,Mexico,flour;baking powder;salt;butter;sugar;egg yolks,bake
+60,Vegetable-Burger Soup,Vietnam,ground beef;water;sugar;onion soup;tomatoes;tomato sauce,boil;simmer
+61,Chicken Ole,USA,chicken breasts;cream of chicken soup;cream of mushroom soup;green chili salsa sauce;green chilies;milk,bake
+62,Creamy Coleslaw(Better Homes And Gardens),France,cabbage;carrots;green pepper;onion;mayonnaise;vinegar,boil
+63,Creole Flounder,USA,flounder;tomatoes;green pepper;lemon juice;salad oil;salt,bake
+64,Three Bean Salad,Thailand,green beans;yellow beans;kidney beans;sugar;salad oil;vinegar,steam
+65,Dave'S Corn Casserole,China,whole kernel corn;cream-style;sour cream;corn bread;margarine,bake
+66,Casserole Italiano,Italy,ground beef;onion;tomato soup;noodles;oregano;salt,bake
+67,Corned Beef And Cabbage Casserole,Korea,cabbage;dry mustard;corned beef;cream of celery soup;onion,stir-fry
+68,Crab Cakes,Greece,worcestershire sauce;dry mustard;mayonnaise;egg,fry
+69,Taco Dip,Mexico,cream cheese;mayonnaise;taco sauce;green onions;green pepper;tomato,bake
+70,Bonbon Cookies,Korea,butter;peanut butter;graham cracker crumbs;coconut;nut meats;vanilla,stew
+71,Forever Amber,UK,orange sliced candy;angel;pecans;condensed milk;vanilla;orange flavoring,bake
+72,Gooey Coffee Cake,Thailand,yellow cake;eggs;oleo;nuts;eggs;cream cheese,bake
+73,Phylis' Pineapple-Banana Salad,Thailand,pineapple;bananas,grill
+74,Chicken Casserole,Japan,cream of mushroom soup;cream of chicken soup;cream of celery soup;chicken;butter;rice,bake
+75,Pineapple Nut Pie,UK,cream cheese;condensed milk;pineapple;nuts;lemon juice,bake
+76,Annie'S Diabetic Candy,USA,vanilla;cream cheese;butter;peanut butter,steam
+77,Frozen Peach Mousse,France,peaches;sugar;sour cream;lemon juice;vanilla,bake
+78,Strawberry Pie,Ireland,frozen strawberries;sugar;cream cheese,grill
+79,Blueberry Surprise,USA,margarine;graham cracker crumbs;granulated sugar,simmer
+80,Moist Devil'S Food Cake,Germany,flour;baking soda;salt;shortening;sugar;eggs,bake
+81,Dot'S Civil War Cake,Spain,apples;raisins;brown sugar;sugar;shortening;cold water,boil;bake
+82,Potato Casserole,Vietnam,potatoes;onion;butter;cream of chicken soup;sour cream;cheddar cheese,bake
+83,Dream Pie,Germany,vanilla wafers;butter,stew
+84,Divinity Fudge,USA,sugar;white corn syrup;cold water;egg whites;vanilla;nuts,boil
+85,Apple Crisp,Greece,apples;sugar;cinnamon;sugar;flour;salt,stir-fry
+86,Sausage Balls,France,bisquick;sausage;cheddar cheese,bake
+87,Consomme Chicken,Greece,chicken;cream of chicken soup;consomme;rice;salt;pepper,oven-bake
+88,Spanish Hamburgers,France,celery;onions;butter;ground beef;vinegar;lemon juice,simmer
+89,Egg Drop Soup,Italy,chicken broth;cornstarch;egg;green onion,simmer
+90,Mulled Cider,Vietnam,apple juice;allspice;whole cloves;cinnamon;brown sugar,simmer
+91,Sesame Ginger Chicken,Vietnam,sesame seed;grated ginger;honey;soy sauce;chicken;vegetable cooking spray,grill
+92,Egg Casserole,Germany,vidalia onion;fresh mushrooms;green peppers;clove garlic;olive oil;bread,bake
+93,Cranberry-Apple-Orange Salad,France,cranberries;sugar;apple;orange;orange gelatin;nuts,stir-fry
+94,Brown Rice,USA,rice;beef consomme;onion soup;mushrooms;margarine,bake
+95,Cranberry Salad,Greece,cream cheese;margarine;sugar;cranberry sauce;pineapple;walnuts,boil
+96,Cheese Dip,Korea,velveeta cheese;italian tomatoes;green chili peppers;onion;garlic;salt,boil
+97,Funnel Cake,France,flour;salt;soda;sugar;baking powder;egg,fry
+98,Fast Real Good Fudge,Germany,confectioners sugar;cocoa;nuts;margarine;velveeta;vanilla,roast
+99,Squash Casserole,Mexico,squash;onions;sour cream;carrots;chicken;stuffing mix,bake
+100,Cheese Ball,Germany,cream cheese;cheddar cheese;pimento;green pepper;onion;lemon juice,stew
+101,*Apricot Salad,Japan,apricot jello;sugar;cream cheese;jars junior baby food;pineapple;milk,boil
+102,Pound Cake,Greece,flour;sugar;baking powder;salt;eggs;margarine,bake
+103,Monkey Bread,UK,bread;margarine;brown sugar;vanilla pudding;milk;cinnamon,bake
+104,Chicken Roll-Ups,India,crescent rolls;cheese;hen;cream of chicken soup;milk,grill
+105,Beef And Spanish Rice Casserole,Vietnam,spanish rice;corned beef;onion;cheddar cheese,bake
+106,Baked Beans,Ireland,pork;bell pepper;onions;catsup;brown sugar;salt,bake
+107,Sweet-N-Sour Chicken,Mexico,chicken;shortening;onion;carrot chunks;water;chicken,simmer
+108,Ambrosia,Greece,oranges;moist coconut;pecans;cherries;sugar;orange juice,roast
+109,Crazy Peanut Butter Cookies,USA,peanut butter;sugar;egg,bake
+110,Brickle Bars,Spain,yellow cake mix;eggs;margarine;milk;pecans,bake
+111,Pancakes,Greece,flour;soda;salt;sugar;egg;margarine,oven-bake
+112,Crustless Vegetable Ham Pie,Vietnam,butter;mushrooms;garlic;zucchini;onion;eggs,fry
+113,Red Cabbage And Apples,Italy,red cabbage;butter;apples;brown sugar;vinegar,boil
+114,German Potato Salad,China,potatoes;bacon;sugar;flour;salt;pepper,boil;fry
+115,Jan'S Winter Soup,Ireland,butter;onions;ground beef;clove garlic;beef;tomatoes,simmer
+116,Microwave Spice Tea,France,sugar;sugar;ground cloves;cinnamon;instant tea,boil
+117,Barbecue Noodle Cheese Bake,Korea,manwich;hamburg;american cheese;noodles,bake
+118,Cutout Cookie,India,shortening;butter;sugar;eggs;vanilla;flour,bake
+119,Don Juan'S Sangria,India,lime;orange;apple;sugar;red spanish;brandy,roast
+120,Ranch Beef And Beans,Germany,hamburger;onion;kidney beans;butter beans;beans;ketchup,simmer
+121,Crisp Oatmeal Cookies,India,cooking oats;brown sugar;salad oil;eggs;salt;almond extract,bake
+122,Souper Tuna Crunch,Mexico,chinese noodles;campbell's cream;water;chicken;cashews;celery,bake
+123,Cheese-Ham Ball,USA,cheddar cheese;cream cheese;ham;pimiento;parsley;worcestershire sauce,boil
+124,Pasta Chicken Salad(268 Calories Per Serving),Italy,shells;chicken;broccoli flowerets;cauliflower;carrots;green onions,oven-bake
+125,Zucchini-Artichoke Continental,Thailand,frozen artichoke;water;zucchini;fresh mushrooms;green onion;garlic,steam
+126,Supreme Beef Casserole,Spain,ground chuck;shortening;tomatoes;tomato sauce;salt;sugar,simmer
+127,Chicken Salad,Japan,chunk white chicken;celery;almonds;water chestnuts;white grapes;salt,boil
+128,Chess Pie,Korea,margarine;sugar;meal;vinegar;eggs;salt,bake
+129,Cold Spaghetti Salad,Italy,vermicelli;bell pepper;zucchini;purple onion;salad supreme seasoning,boil
+130,Cucumber Salad With Dill,USA,cucumbers;white vinegar;salt;sugar;onion;dill,simmer
+131,Chicken Spaghetti,Italy,chicken;cream of mushroom soup;cream of chicken soup;tomatoes;your choice;spaghetti,stew
+132,Pistachio Salad,Mexico,pistachio pie filling;pineapple;marshmallows,bake
+133,Good Sweet Muffins,China,egg;milk;vegetable oil;flour;sugar;baking powder,bake
+134,Vanilla Creme Dessert,UK,flour;margarine;pecans;cream cheese;powdered sugar;instant vanilla pudding,bake
+135,St. Joseph'S Zeppole,Thailand,water;butter;sugar;flour;eggs,boil;bake
+136,"Corn ""Oysters""",USA,cream-style corn;eggs;onion;crackers;salt,fry
+137,Bright Party Beans,China,ground beef;onion;beans;kidney beans;yellow lima beans;green baby,fry;roast
+138,Apricot Dessert,Greece,cake;apricot nectar;sugar;cornstarch;walnuts,boil
+139,Honey Almond Squares,Italy,cake mix;cream cheese;alfalfa honey;almonds,bake
+140,French Onion Soup,France,butter;onions;beef stock;chicken stock;worcestershire sauce;bay leaf,simmer
+141,Apple Pie,China,apples;sugar;flour;cinnamon;salt,bake
+142,Sloppy Joes,Vietnam,hamburger;ketchup;worcestershire sauce;mustard;sugar;salt,simmer
+143,7-Up Cake,Germany,flour;sugar;eggs;butter;lemon flavor;yellow food coloring,bake
+144,Corned Beef Dip,Germany,corned beef;cream cheese;mayonnaise;pickles;onion;horseradish,grill
+145,Chocolate Pie,Japan,sugar;milk;cocoa;flour;egg yolks;clump,boil;bake
+146,Tater Tot Casserole,China,tater;ground beef;onion;bell pepper;cream of mushroom soup;cream of celery soup,bake
+147,Blackberry Pie,China,sugar;cornstarch;water;flavored gelatin;fresh blackberries;pastry shell,stir-fry
+148,Caramel Pie,Germany,coconut;margarine;slivered almonds;milk;graham cracker crusts;cream cheese,fry
+149,Dill Dip,China,miracle;sour cream;onion;parsley flakes;dill weed,oven-bake
+150,Broccoli Cornbread,Japan,onion;oil;frozen broccoli;margarine;mix;eggs,fry;bake
+151,Vegetable Soup,Thailand,onion;potato;green sweet peppers;celery;carrots;macaroni,boil;simmer
+152,Chocolate Peanut Butter Cake,Germany,cocoa;oleo;flour;sugar;baking soda;salt,bake
+153,Magic Cookie Bars,France,butter;graham cracker crumbs;milk;semi-sweet chocolate chips;flaked coconut;nuts,bake
+154,Pecan Pralines,Thailand,sugar;brown sugar;milk;butter;pecans;coconut,roast
+155,"Chocolate ""Stuff""",Mexico,chocolate pudding;vanilla wafers;pecans,stew
+156,Easy Chocolate Frosting,Ireland,white sugar;butter;milk;chocolate chips;vanilla,boil
+157,No Bake Pumpkin Pie,Vietnam,unflavored gelatine;milk;eggs;pumpkin;cinnamon;ginger,bake
+158,Baked French Toast,France,eggs;sugar;ground nutmeg;orange juice;cream;vanilla,roast
+159,Puppy Chow,Ireland,cereal;chocolate chips;powdered sugar;peanut butter;margarine;vanilla,simmer
+160,Tamale Casserole,Germany,yellow hominy;olives;green chilies;tamales;cheddar cheese;onions,bake
+161,Bonnie'S Bread,Japan,water;cake yeast;salt;eggs;sugar,bake
+162,Chicken Pot Pie,Italy,chicken;cream of mushroom soup;chicken broth;peas;onion;oleo,bake
+163,Smoked Turkey Risotto,UK,chicken;olive;green onions;clove garlic;arborio;oregano,boil;simmer
+164,Eggplant Spaghetti Sauce,Italy,oil;eggplant;onions;cauliflower;green pepper;fresh parsley,boil;simmer
+165,Watergate Cake,UK,white cake mix;+;pistachio instant pudding;ginger ale;eggs;pecans,bake
+166,Plum Muffins,Mexico,flour;walnuts;eggs;sugar;allspice;oil,bake
+167,Cranberry Punch,Thailand,cranberry juice;ginger ale;o;boiling water;frozen lemonade;cold water,simmer
+168,Sweet Potato Pie,Korea,sweet potatoes;butter;sugar;eggs;nutmeg,bake
+169,Butternut Pound Cake,France,sugar;crisco oil;eggs;flour;sweet milk;vanilla flavor,bake
+170,Morning Glory Muffins,Mexico,flour;sugar;baking soda;ground cinnamon;salt;carrots,bake
+171,Chicken Breasts With Wild Rice,Thailand,wild rice;condensed cream;onion soup;mushrooms;water;chicken breasts,oven-bake
+172,Creole Green Beans,Germany,green pepper;onion;bacon drippings;flour;salt;sugar,simmer
+173,Banana Bread,Vietnam,eggs;bananas;butter;sugar;flour;soda,bake
+174,Corned Beef Hash Swirls,India,bisquick;beef hash;mustard;salt,bake
+175,Patio Potatoes,Thailand,hash browns;margarine;salt;pepper;onion;cream of mushroom soup,bake
+176,Sky High Biscuits,Thailand,flour;baking powder;sugar;salt;cream of tartar;butter,bake
+177,Lasagne,USA,lean hamburger;ricotta cheese;lasagne noodles;mozzarella cheese,boil;bake
+178,Coconut Pie,Thailand,eggs;milk;vanilla;butter;sugar;flour,bake
+179,Bullets,Mexico,ground beef;flour;salt,boil
+180,Mom'S Pancakes,USA,flour;baking powder;salt;sugar;egg;milk,stew
+181,Pecan Kisses,Korea,egg;light brown sugar;vanilla;pecans,bake
+182,Pizza Casserole,Italy,ground beef;sauce;mozzarella cheese;mushrooms;biscuit mix;milk,bake
+183,Chocolate Lover'S No-Bake Brownies,Vietnam,semi-sweet chocolate chips;condensed milk;chocolate wafers;nuts,boil
+184,Broccoli Casserole,Germany,broccoli;mushroom soup;mayonnaise;egg;onion;salt,bake
+185,Fruit Bars,Japan,flour;baking powder;almond extract;nuts;maraschino cherries;sugar,bake
+186,Chinese Hamburger,China,hamburger;oil;onion;celery;rice;cream of mushroom soup,bake
+187,Almond Roco,Korea,butter;sugar;water;almonds;chocolate;almonds,stew
+188,Hungarian-Stuffed Peppers,Spain,peppers;onion;garlic powder;ground beef;rice;egg,fry
+189,Lemon Pudding Pound Cake,Germany,eggs;yellow cake mix;water;oil,bake
+190,Peanut Butter Cup Cookies,Mexico,butter;peanut butter;brown sugar;white sugar;egg;vanilla,bake
+191,Egg Cheese Souffle,Mexico,eggs;milk;mustard;salt;onion powder;pepper,bake
+192,Apple Bread,Germany,margarine;egg;cinnamon;ground cloves;salt;pecans,bake
+193,Homemade Noodles,Thailand,flour;eggs;water,boil
+194,Chocolate Fudge,USA,margarine;milk;sugar;marshmallows;baking chocolate;milk chocolate,boil
+195,Fruit Cake,Italy,eggs;flour;salt;sugar;baking powder;chocolate chips,bake
+196,Cranberry Scones,Spain,butter;confectioners sugar,fry
+197,Brownie Pie,Mexico,all-purpose;cocoa;sugar;eggs;margarine;salt,bake
+198,Cream Puff Dessert,Mexico,water;margarine;flour;eggs;vanilla instant pudding;milk,boil;bake
+199,Chantilly Low-Fat,Japan,nonfat plain yogurt;heavy cream;mandarin juice,boil;simmer
+200,Golf Balls,Italy,cocoa;butter;powdered sugar;milk;vanilla;peanut butter,boil
