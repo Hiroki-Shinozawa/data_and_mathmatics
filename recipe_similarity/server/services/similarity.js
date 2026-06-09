@@ -20,7 +20,8 @@ function findTopSimilar({ ingredientSet, methodSet }, recipes, topN = 10) {
     const methodScore = methodSet.size > 0 ? cosineSimilarity(methodSet, recipeMethodSet) : 0;
 
     let score = 0;
-    if (ingredientSet.size > 0 && methodSet.size > 0) {
+    const recipeHasMethods = recipeMethodSet.size > 0;
+    if (ingredientSet.size > 0 && methodSet.size > 0 && recipeHasMethods) {
       score = (ingredientScore + methodScore) / 2;
     } else {
       score = ingredientScore + methodScore;

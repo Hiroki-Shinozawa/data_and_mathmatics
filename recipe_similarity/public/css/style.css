@@ -32,6 +32,97 @@ button {
 }
 button:disabled { opacity: 0.4; cursor: not-allowed; }
 
+.tab-nav {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #e07b39;
+  background: #fff;
+  color: #e07b39;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-button.active {
+  background: #e07b39;
+  color: #fff;
+}
+
+.quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.quick-button {
+  padding: 8px 12px;
+  background: #f6f0e7;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quick-button:hover {
+  background: #e7d4b2;
+}
+
+.help-panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.help-panel h2 {
+  margin-top: 0;
+}
+
+.help-panel ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.tag-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+  min-height: 28px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  background: #e07b39;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.tag button {
+  padding: 0 2px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 0;
+}
+
+.tag button:disabled { opacity: 1; cursor: pointer; }
+
 a { color: #e07b39; }
 
 /* 結果リスト */
@@ -45,7 +136,8 @@ ol { padding-left: 0; list-style: none; }
   margin-bottom: 10px;
 }
 
-.result-card h3 { margin: 0 0 4px; font-size: 1rem; }
+.result-card h3 { margin: 0 0 2px; font-size: 1rem; }
+.title-original { font-size: 0.78rem; color: #999; margin-bottom: 4px; }
 .score { font-size: 0.85rem; color: #e07b39; font-weight: bold; }
 .common { font-size: 0.82rem; color: #666; margin-top: 4px; }
 

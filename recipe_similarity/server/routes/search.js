@@ -3,19 +3,27 @@ const router = express.Router();
 const { getRecipes } = require('../services/loader');
 const { toIngredientSet, toMethodSet } = require('../services/vectorize');
 const { findTopSimilar } = require('../services/similarity');
+const { translateToEnglish } = require('../services/translate');
 
 router.post('/search', (req, res) => {
   const { ingredients = [], methods = [] } = req.body;
 
-  const hasIngredients = Array.isArray(ingredients) && ingredients.length > 0;
-  const hasMethods = Array.isArray(methods) && methods.length > 0;
+  const translatedIngredients = Array.isArray(ingredients)
+    ? ingredients.map(translateToEnglish)
+    : [];
+  const translatedMethods = Array.isArray(methods)
+    ? methods.map(translateToEnglish)
+    : [];
+
+  const hasIngredients = translatedIngredients.length > 0;
+  const hasMethods = translatedMethods.length > 0;
 
   if (!hasIngredients && !hasMethods) {
     return res.status(400).json({ error: '材料または調理法を1つ以上入力してください' });
   }
 
-  const ingredientSet = hasIngredients ? toIngredientSet(ingredients) : new Set();
-  const methodSet = hasMethods ? toMethodSet(methods) : new Set();
+  const ingredientSet = hasIngredients ? toIngredientSet(translatedIngredients) : new Set();
+  const methodSet = hasMethods ? toMethodSet(translatedMethods) : new Set();
   const recipes = getRecipes();
 
   if (recipes.length === 0) {

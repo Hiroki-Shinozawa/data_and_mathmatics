@@ -4,74 +4,16 @@ const methodInput = document.getElementById('methods-input');
 const ingredientTagArea = document.getElementById('ingredient-tag-area');
 const methodTagArea = document.getElementById('method-tag-area');
 const searchBtn = document.getElementById('search-btn');
+const commonIngredientButtons = document.getElementById('common-ingredient-buttons');
+const commonMethodButtons = document.getElementById('common-method-buttons');
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabPanels = document.querySelectorAll('.tab-panel');
 
-const TRANSLATION_MAP = {
-  'じゃがいも': 'potato',
-  'じゃが芋': 'potato',
-  'ジャガイモ': 'potato',
-  '玉ねぎ': 'onion',
-  'たまねぎ': 'onion',
-  '玉葱': 'onion',
-  '牛肉': 'beef',
-  '豚肉': 'pork',
-  '鶏肉': 'chicken',
-  'にんじん': 'carrot',
-  '人参': 'carrot',
-  'キャベツ': 'cabbage',
-  'ほうれん草': 'spinach',
-  'トマト': 'tomato',
-  '茄子': 'eggplant',
-  'ナス': 'eggplant',
-  'しょうゆ': 'soy sauce',
-  '醤油': 'soy sauce',
-  'みりん': 'mirin',
-  '砂糖': 'sugar',
-  '塩': 'salt',
-  'にんにく': 'garlic',
-  'ニンニク': 'garlic',
-  'ごま油': 'sesame oil',
-  'ごま': 'sesame',
-  'バター': 'butter',
-  '小麦粉': 'flour',
-  '牛乳': 'milk',
-  '卵': 'egg',
-  '味噌': 'miso',
-  'しょうが': 'ginger',
-  '生姜': 'ginger',
-  'ココナッツミルク': 'coconut milk',
-  'カレーパウダー': 'curry powder',
-  'カレー粉': 'curry powder',
-  'バジル': 'basil',
-  'オリーブオイル': 'olive oil',
-  'モッツァレラ': 'mozzarella',
-  'チーズ': 'cheese',
-  'レモン': 'lemon',
-  '煮る': 'boil',
-  '煮込み': 'stew',
-  '煮込む': 'stew',
-  '蒸す': 'steam',
-  '蒸し': 'steam',
-  '焼く': 'grill',
-  '焼き': 'grill',
-  '炒める': 'fry',
-  '炒め': 'fry',
-  '揚げる': 'fry',
-  '茹でる': 'boil'
-};
+const COMMON_INGREDIENTS = ['じゃがいも', '玉ねぎ', '牛肉', '豚肉', '鶏肉', 'にんじん', 'しょうゆ', 'みりん', '塩'];
+const COMMON_METHODS = ['煮る', '炒める', '蒸す', '焼く', '揚げる', '煮込む', 'オーブン焼き', 'ロースト'];
 
 let ingredientTags = [];
 let methodTags = [];
-
-function translateValue(value) {
-  const normalized = value.toLowerCase().trim().replace(/　/g, ' ');
-  if (TRANSLATION_MAP[normalized]) {
-    return TRANSLATION_MAP[normalized];
-  }
-  if (/[ぁ-んァ-ン一-龥]/.test(normalized)) {
-    return normalized;
-  }
-  return normalized;
-}
 
 function renderTags(area, tags) {
   area.innerHTML = '';
@@ -84,10 +26,33 @@ function renderTags(area, tags) {
   searchBtn.disabled = ingredientTags.length === 0 && methodTags.length === 0;
 }
 
+function renderQuickButtons(container, items, type) {
+  container.innerHTML = '';
+  items.forEach(item => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'quick-button';
+    button.dataset.type = type;
+    button.dataset.value = item;
+    button.textContent = item;
+    container.appendChild(button);
+  });
+}
+
+function switchTab(tabName) {
+  tabButtons.forEach(button => {
+    const isActive = button.dataset.tab === tabName;
+    button.classList.toggle('active', isActive);
+  });
+  tabPanels.forEach(panel => {
+    panel.classList.toggle('hidden', panel.id !== tabName);
+  });
+}
+
 function addTag(value, type) {
   const raw = value.trim();
   if (!raw) return;
-  const query = translateValue(raw);
+  const query = window.translateValue(raw);
   if (!query) return;
 
   const tags = type === 'ingredient' ? ingredientTags : methodTags;
@@ -137,19 +102,6 @@ methodInput.addEventListener('blur', () => {
   }
 });
 
-document.addEventListener('click', e => {
-  if (e.target.tagName === 'BUTTON' && e.target.dataset.index != null) {
-    const index = Number(e.target.dataset.index);
-    const type = e.target.dataset.type;
-    if (type === 'ingredient') {
-      ingredientTags.splice(index, 1);
-    } else {
-      methodTags.splice(index, 1);
-    }
-    updateTagAreas();
-  }
-});
-
 form.addEventListener('submit', e => {
   e.preventDefault();
   if (ingredientTags.length === 0 && methodTags.length === 0) return;
@@ -164,6 +116,32 @@ form.addEventListener('submit', e => {
   if (displayMethods) params.set('displayMethod', displayMethods);
   window.location.href = `results.html?${params}`;
 });
+
+document.addEventListener('click', e => {
+  if (e.target.matches('.quick-button')) {
+    addTag(e.target.dataset.value, e.target.dataset.type);
+    return;
+  }
+
+  if (e.target.tagName === 'BUTTON' && e.target.dataset.index != null) {
+    const index = Number(e.target.dataset.index);
+    const type = e.target.dataset.type;
+    if (type === 'ingredient') {
+      ingredientTags.splice(index, 1);
+    } else {
+      methodTags.splice(index, 1);
+    }
+    updateTagAreas();
+  }
+
+  if (e.target.matches('.tab-button')) {
+    switchTab(e.target.dataset.tab);
+  }
+});
+
+renderQuickButtons(commonIngredientButtons, COMMON_INGREDIENTS, 'ingredient');
+renderQuickButtons(commonMethodButtons, COMMON_METHODS, 'method');
+switchTab('search-tab');
 
 function escapeHtml(str) {
   return str.replace(/[&<>'"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));

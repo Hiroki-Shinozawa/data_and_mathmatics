@@ -3,7 +3,29 @@ const { parse } = require('csv-parse');
 
 let recipes = [];
 
-const LOAD_LIMIT = 50000;
+const LOAD_LIMIT = Infinity;
+
+const METHOD_KEYWORDS = {
+  boil:  /\bboil(ed|ing)?\b/i,
+  stew:  /\b(stew(ed|ing)?|brais(ed|ing|e))\b/i,
+  steam: /\bsteam(ed|ing)?\b/i,
+  grill: /\b(grill(ed|ing)?|broil(ed|ing)?)\b/i,
+  fry:   /\b(fry|fr(ied|ying)|saut[eé](ed|ing)?|stir.?fr(y|ied|ying)|deep.?fr(y|ied|ying)|pan.?fr(y|ied|ying))\b/i,
+  bake:  /\bbak(ed?|ing)\b/i,
+  roast: /\broast(ed|ing)?\b/i,
+};
+
+function extractMethods(directionsStr) {
+  if (!directionsStr) return [];
+  let text = directionsStr;
+  try {
+    const parsed = JSON.parse(directionsStr);
+    if (Array.isArray(parsed)) text = parsed.join(' ');
+  } catch { /* use raw string */ }
+  return Object.entries(METHOD_KEYWORDS)
+    .filter(([, re]) => re.test(text))
+    .map(([method]) => method);
+}
 
 async function loadRecipes(filePath) {
   return new Promise((resolve, reject) => {
@@ -27,16 +49,21 @@ async function loadRecipes(filePath) {
           let ingredients = [];
           let methods = [];
 
-          if (ingredientsStr) {
-            ingredients = ingredientsStr.split(';').map(i => i.toLowerCase().trim()).filter(Boolean);
-          } else if (record.NER) {
+          if (record.NER) {
             const ner = JSON.parse(record.NER);
             ingredients = Array.isArray(ner) ? ner.map(i => i.toLowerCase().trim()).filter(Boolean) : [];
+          } else if (ingredientsStr) {
+            try {
+              const parsed = JSON.parse(ingredientsStr);
+              ingredients = Array.isArray(parsed)
+                ? parsed.map(i => i.toLowerCase().trim()).filter(Boolean)
+                : ingredientsStr.split(';').map(i => i.toLowerCase().trim()).filter(Boolean);
+            } catch {
+              ingredients = ingredientsStr.split(';').map(i => i.toLowerCase().trim()).filter(Boolean);
+            }
           }
 
-          if (methodsStr) {
-            methods = methodsStr.split(';').map(m => m.toLowerCase().trim()).filter(Boolean);
-          }
+          methods = extractMethods(record.directions || methodsStr);
 
           if (ingredients.length > 0 || methods.length > 0) {
             recipes.push({

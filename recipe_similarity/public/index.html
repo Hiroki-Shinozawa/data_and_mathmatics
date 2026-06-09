@@ -13,39 +13,62 @@
       <p class="subtitle">材料を入力すると、世界の似た料理を探します</p>
     </header>
 
+    <nav class="tab-nav" role="tablist">
+      <button type="button" class="tab-button active" data-tab="search-tab">検索</button>
+      <button type="button" class="tab-button" data-tab="help-tab">使い方</button>
+    </nav>
+
     <main>
-      <form id="search-form">
-        <div class="input-group">
-          <label for="ingredients-input">材料をカンマ区切りで入力（英語 / 日本語可）</label>
-          <input
-            type="text"
-            id="ingredients-input"
-            placeholder="例: potato, onion, beef, soy sauce または じゃがいも, 玉ねぎ, 牛肉"
-            autocomplete="off"
-          />
-          <p class="hint">例: 肉じゃがなら「potato, onion, beef, soy sauce, mirin」または「じゃがいも, 玉ねぎ, 牛肉, しょうゆ, みりん」</p>
+      <section id="search-tab" class="tab-panel">
+        <form id="search-form">
+          <div class="input-group">
+            <label for="ingredients-input">材料をカンマ区切りで入力（英語 / 日本語可）</label>
+            <input
+              type="text"
+              id="ingredients-input"
+              placeholder="例: potato, onion, beef, soy sauce または じゃがいも, 玉ねぎ, 牛肉"
+              autocomplete="off"
+            />
+            <p class="hint">例: 肉じゃがなら「potato, onion, beef, soy sauce, mirin」または「じゃがいも, 玉ねぎ, 牛肉, しょうゆ, みりん」</p>
+          </div>
+
+          <div class="quick-buttons" id="common-ingredient-buttons"></div>
+          <div class="tag-area" id="ingredient-tag-area"></div>
+
+          <div class="input-group">
+            <label for="methods-input">調理法をカンマ区切りで入力（英語 / 日本語可）</label>
+            <input
+              type="text"
+              id="methods-input"
+              placeholder="例: boil, stew, fry または 煮る, 炒める, 蒸す"
+              autocomplete="off"
+            />
+            <p class="hint">例: 煮る / stew、炒める / fry、蒸す / steam</p>
+          </div>
+
+          <div class="quick-buttons" id="common-method-buttons"></div>
+          <div class="tag-area" id="method-tag-area"></div>
+
+          <button type="submit" id="search-btn" disabled>検索する</button>
+        </form>
+      </section>
+
+      <section id="help-tab" class="tab-panel hidden">
+        <div class="help-panel">
+          <h2>使い方</h2>
+          <ul>
+            <li>材料または調理法を日本語・英語どちらでも入力できます。</li>
+            <li>よく使う材料/調理法ボタンをクリックすると、自動でタグが追加されます。</li>
+            <li>タグは削除ボタンで消せます。複数入力もカンマ区切りで可能です。</li>
+            <li>入力後に「検索する」を押すと、類似度の高いレシピが表示されます。</li>
+          </ul>
+          <p>例: 「じゃがいも, 玉ねぎ, 牛肉」と「煮る」で検索すると、肉じゃが系のレシピが見つかりやすくなります。</p>
         </div>
-
-        <div class="tag-area" id="ingredient-tag-area"></div>
-
-        <div class="input-group">
-          <label for="methods-input">調理法をカンマ区切りで入力（英語 / 日本語可）</label>
-          <input
-            type="text"
-            id="methods-input"
-            placeholder="例: boil, stew, fry または 煮る, 炒める, 蒸す"
-            autocomplete="off"
-          />
-          <p class="hint">例: 煮る / stew、炒める / fry、蒸す / steam</p>
-        </div>
-
-        <div class="tag-area" id="method-tag-area"></div>
-
-        <button type="submit" id="search-btn" disabled>検索する</button>
-      </form>
+      </section>
     </main>
   </div>
 
+  <script src="js/translate.js"></script>
   <script src="js/search.js"></script>
 </body>
 </html>
